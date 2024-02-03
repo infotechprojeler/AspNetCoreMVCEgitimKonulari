@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "MVC03 Data Transfer";
+    ViewBag.ActiveClass = " active";
+    var urunler = ViewData["Urunler"] as List<Urun>;
+}
+
+<h1>MVC03 Data Transfer</h1>
+
+<table class="table">
+    <tr>
+        <th>Ürün Kategorisi</th>
+        <td>@ViewBag.UrunKategorisi</td>
+    </tr>
+    <tr>
+        <th>Ürün Adı</th>
+        <td>@ViewData["UrunAdi"]</td>
+    </tr>
+    <tr>
+        <th>Ürün Fiyatı</th>
+        <td>@TempData["UrunFiyati"] ₺</td>
+    </tr>
+</table>
+
+<h3>@ViewBag.UrunKategorisi Ürünleri</h3>
+
+@if (urunler != null)
+{
+    <table class="table">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Ürün Fiyatı</th>
+            <th>Stok</th>
+        </tr>
+        @foreach (var item in urunler)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+            </tr>
+        }
+        <caption>
+            @TempData["UrunBilgi"]
+        </caption>
+    </table>
+}
+
+<h2>MVC de View dan Controller a Veri Gönderme</h2>
+
+<h3>1-Get Yöntemiyle Veri Gönderme</h3>
+
+<form action="/MVC03DataTransfer" method="get">
+    <input type="text" name="txtAra" placeholder="Ürün Ara" />
+    <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+
+<h4>Aradığınız Kelime : @ViewBag.ArananKelime</h4>
+
+<h3>2-Post Yöntemiyle Veri Gönderme</h3>
+
+@{
+    // sayfa içerisinde çok satırlı c# kodu yazmak için @{} bloğu açılır.
+    var kategoriler = new SelectListItem[]
+    {
+        new SelectListItem(){ Text = "Elektronik"},
+        new SelectListItem(){ Text = "Bilgisayar"},
+        new SelectListItem(){ Text = "Telefon"}
+                                                                    };
+}
+
+<form action="/MVC03DataTransfer/Index" method="post">
+    <table class="table">
+        <tr>
+            <td>Ürün Adı</td>
+            <td>@Html.TextBox("text1")</td>
+        </tr>
+        <tr>
+            <td>Kategori</td>
+            <td>@Html.DropDownList("ddlListe", kategoriler)</td>
+        </tr>
+        <tr>
+            <td>Durum</td>
+            <td>@Html.CheckBox("cbOnay") <label for="cbOnay">Aktif</label> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Gönder" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<hr />
+<div class="alert alert-info">
+    <h4>@ViewBag.Baslik1</h4>
+    <br />
+    @ViewBag.Mesaj1
+    <br />
+    @ViewBag.Mesaj2
+    <br />
+    @ViewBag.Mesaj3
+</div>
+
+<hr />
+
+<div class="alert alert-primary">
+    <h4>@ViewBag.Baslik2</h4>
+    <br />
+    @ViewBag.Mesaj4
+    <br />
+    @ViewBag.Mesaj5
+    <br />
+    @ViewBag.Mesaj6
+</div>
+
+<hr />
+
+<div class="alert alert-danger">
+    <h4>@ViewBag.Baslik3</h4>
+    <br />
+    @ViewBag.Mesaj7
+    <br />
+    @ViewBag.Mesaj8
+    <br />
+    @ViewBag.Mesaj9
+</div>

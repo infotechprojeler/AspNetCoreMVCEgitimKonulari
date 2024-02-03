@@ -1,0 +1,86 @@
+﻿@model Kullanici
+@{
+    ViewBag.Title = "Kullanıcı Detay";
+}
+
+<h2>Kullanıcı Detay</h2>
+
+<p>
+    Bir sayfada model kullanabilmek için model class ını namespace i ile birlikte yazarak kullanmamız gerekir.
+</p>
+
+<p>
+    Alternatif olarak ise namespace i web config dosyasına ekleyebilir, böylece her seferinde namespace i class ın önüne yazmaktan kurtulabiliriz.
+</p>
+
+<p>
+    Sayfada modeli kullanabilmek için @@Model (model in ilk harfi büyük olacak!) yazıp . ile içerisinden istediğimiz property i ekrana yazdırmasını sağlayabiliriz.
+</p>
+
+<h3>Sayfada Model İçindeki Verileri Gösterme</h3>
+
+<div class="alert alert-danger">
+    @@Model.Ad : Modeli bu şekilde ekrana bastırdığımızda eğer model class ı null ise Nesne başvurusu bir nesnenin örneğine ayarlanmadı.(System.NullReferenceException:) hatası alırız!
+    <br />
+    Bu hatanın sebebi controller dan sayfada beklenen model class ı içi doldurularak gönderilmediği için olur!!!
+</div>
+
+@if (Model != null) // Burada model nesnemizin null olma ihtimaline karşı önlem olarak if şartına bağlayıp hatayı önleyebiliriz.
+{
+    <h4>@ViewBag.KullaniciAdSoyad Bilgileri</h4>
+    <table class="table table-striped table-hover">
+        <tr>
+            <td>Ad</td>
+            <td>@Model.Ad</td>
+        </tr>
+        <tr>
+            <td>Soyad</td>
+            <td>@Model.Soyad</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Kullanıcı Adı</td>
+            <td>@Model.KullaniciAdi</td>
+        </tr>
+        <tr>
+            <td>Şifre</td>
+            <td>@Model.Sifre</td>
+        </tr>
+    </table>
+}
+<hr />
+
+<form action="/MVC04ModelBinding/KullaniciDetay" method="post">
+    <table class="table table-striped table-hover">
+        <caption>Model kullanımında html helpers metotlarının for ile biten özel versiyonlarını kullanarak veri alışverişini yapabiliriz.</caption>
+        <tr>
+            <td>Ad</td>
+            <td>@Html.TextBoxFor(model => model.Ad)</td>
+        </tr>
+        <tr>
+            <td>Soyad</td>
+            <td>@Html.TextBoxFor(model => model.Soyad)</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>Kullanıcı Adı</td>
+            <td>@Html.TextBoxFor(model => model.KullaniciAdi)</td>
+        </tr>
+        <tr>
+            <td>Şifre</td>
+            <td>@Html.TextBoxFor(model => model.Sifre)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Gönder" />
+            </td>
+        </tr>
+    </table>
+</form>

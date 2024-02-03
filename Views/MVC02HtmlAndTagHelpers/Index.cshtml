@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "MVC Html and Tag Helpers";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    Web sayfalarında kullanılan html elementlerini oluşturmak için Mvc de Html metotları vardır. Bunları kullanarak ekranda textbox, dropdownlist vb elementleri oluşturabiliriz.
+</p>
+
+@Html.ActionLink("Anasayfa", "Index")
+<hr />
+@Html.ActionLink("Anasayfa", "Index", "home")
+
+<a href="/Home/Index">Anasayfa</a>
+
+<h3>Tag Helper ile Link Oluşturma</h3>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
+
+<hr />
+@Html.ActionLink("Hakkımızda", "About", "Home")
+@Html.ActionLink("Hakkımızda", "About", "Home", new { id = "18" }, new { @class = "nav-link" })
+<hr />
+
+<h3>Html Checkbox Oluşturma</h3>
+
+@Html.CheckBox("Onay") Onaylıyorum
+
+<h3>Html Textbox Oluşturma</h3>
+
+@Html.TextBox("txtAd") Ekranda html input oluşturur
+
+<input type="text" name="txtSoyad" value="" />
+
+<h3>
+    Html Hidden - Gizli Element Oluşturma
+</h3>
+
+@Html.Hidden("GizliElement", "Html Hidden - Gizli Element Oluşturmayı sağlar")
+@Html.Hidden("UrunId", 118)
+
+<h3>
+    Html Label Elementi
+</h3>
+
+@Html.Label("lblAd", "Html Label Elementi")
+
+<h3>
+    Html Textarea Elementi
+</h3>
+
+@Html.TextArea("txtAdres", "Html Textarea Elementi : Çok satırlı textbox")
+
+<h3>
+    Html Password Elementi
+</h3>
+
+Şifre : @Html.Password("txtSifre")
+
+<h3>
+    Html Helpers İle Form Oluşturma
+</h3>
+
+@using (Html.BeginForm())
+{
+    <h4>Kullanıcı Adı</h4>
+    @Html.Editor("txtKullaniciAdi")
+    <h4>Şifre</h4>
+    @Html.Password("txtPassword")
+    <br />
+    <input type="submit" value="Giriş" />
+}
+
+<hr />
+
+<h3>
+    Html Listbox ve Dropdownlist Elementleri
+</h3>
+
+@{
+    // sayfa içerisinde çok satırlı c# kodu yazmak için @{} bloğu açılır.
+    var kategoriler = new SelectListItem[]
+    {
+        new SelectListItem(){ Text = "Elektronik"},
+        new SelectListItem(){ Text = "Bilgisayar"},
+        new SelectListItem(){ Text = "Telefon"}
+                    };
+    string htmlRawOrnek = @"<h3>Html Raw ile Ekrana Html İçerik Ekleme</h3>";
+}
+
+<h4>Listbox</h4>
+@Html.ListBox("lbListe", kategoriler)
+
+<h4>DropDownList</h4>
+@Html.DropDownList("ddlListe", kategoriler)
+
+<h3>
+    RadioButton Elementi
+</h3>
+
+@Html.RadioButton("rbOnay", "Onaylıyorum") Sözleşmeyi Onaylıyorum
+
+<hr />
+
+<h3>
+    Html Raw ile Ekrana Html İçerik Ekleme
+</h3>
+
+@htmlRawOrnek
+
+@Html.Raw(htmlRawOrnek)
+
+@Html.Raw("<b style=\"color:red\">Html Raw ile Ekrana Html İçerik Ekleme</b>")
+
+<h3>
+    Tag Helper İle Form Oluşturma
+</h3>
+
+<form asp-controller="MVC02HtmlAndTagHelpers" asp-action="Index" method="post">
+    <h4>Kullanıcı Adı</h4>
+    <input type="text" value="" name="txtKullaniciAdi" />
+    <h4>Şifre</h4>
+    <input type="password" name="password" />
+    <br />
+    <input type="submit" value="Giriş" />
+</form>

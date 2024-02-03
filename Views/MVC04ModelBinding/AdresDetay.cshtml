@@ -1,0 +1,49 @@
+﻿@model Adres
+@{
+    ViewBag.Title = "Adres Detay";
+}
+
+<h2>Adres Detay</h2>
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>Şehir</th>
+            <td>@Model.Sehir</td>
+        </tr>
+        <tr>
+            <th>İlçe</th>
+            <td>@Model.Ilce</td>
+        </tr>
+        <tr>
+            <th>Açık Adres</th>
+            <td>@Model.AcikAdres</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <form action="/MVC04ModelBinding/AdresDetay" method="post">
+        <table class="table">
+            <tr>
+                <th>Şehir</th>
+                <td>@Html.TextBoxFor(m => m.Sehir)</td>
+            </tr>
+            <tr>
+                <th>İlçe</th>
+                <td>@Html.TextBoxFor(m => m.Ilce)</td>
+            </tr>
+            <tr>
+                <th>Açık Adres</th>
+                <td>@Html.TextAreaFor(m => m.AcikAdres)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Gönder" />
+                </td>
+            </tr>
+        </table>
+    </form>
+}

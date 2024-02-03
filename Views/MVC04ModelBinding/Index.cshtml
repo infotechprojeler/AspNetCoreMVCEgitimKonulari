@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "MVC04 Model Binding";
+}
+
+<h2>MVC04 Model Binding</h2>
+
+<p>
+    MVC de model kullanımı proje yaparken kullandığımız class lar ile yapılır
+</p>
+
+<p>
+    1 sayfada sadece 1 tane model class ı kullanılabilir.
+</p>
+
+<p>
+    1 sayfada model kullanabilmek için sayfanın en üst satırına @@model ifadesinden sonra ilgili class ın yolunu yazmamız gerekir.
+</p>
+
+<p>
+    Kullanacağımız model class larını projedeki Models klasörüne sağ tık add class diyerek ekleyebiliriz.
+</p>
+
+@Html.ActionLink("Kullanıcı Detay", "KullaniciDetay")
+<br />
+@Html.ActionLink("Adres Detay", "AdresDetay")
+<br />
+<a asp-action="KullaniciAdresDetay">Kullanıcı ve Adres Detay</a>

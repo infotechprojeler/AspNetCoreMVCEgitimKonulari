@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AspNetCoreMVCEgitimKonulari
+build_property.RootNamespace = AspNetCoreMVCEgitimKonulari
+build_property.ProjectDir = C:\Users\Infotech Academy\source\repos\AspNetCoreMVCEgitimKonulari\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Infotech Academy\source\repos\AspNetCoreMVCEgitimKonulari
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC01RazorSyntax/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDFSYXpvclN5bnRheFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC02HtmlAndTagHelpers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDJIdG1sQW5kVGFnSGVscGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC03DataTransfer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDNEYXRhVHJhbnNmZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC04ModelBinding/AdresDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDRNb2RlbEJpbmRpbmdcQWRyZXNEZXRheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC04ModelBinding/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDRNb2RlbEJpbmRpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC04ModelBinding/KullaniciAdresDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDRNb2RlbEJpbmRpbmdcS3VsbGFuaWNpQWRyZXNEZXRheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC04ModelBinding/KullaniciDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDRNb2RlbEJpbmRpbmdcS3VsbGFuaWNpRGV0YXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC05ModelValidation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDVNb2RlbFZhbGlkYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC05ModelValidation/YeniUye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDVNb2RlbFZhbGlkYXRpb25cWWVuaVV5ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC06CRUD/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC06CRUD/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a956071cik

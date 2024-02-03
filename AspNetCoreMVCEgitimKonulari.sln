@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMVCEgitimKonulari", "AspNetCoreMVCEgitimKonulari.csproj", "{F96B6644-0B4E-4C7B-94A1-1E4D6891E408}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F96B6644-0B4E-4C7B-94A1-1E4D6891E408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96B6644-0B4E-4C7B-94A1-1E4D6891E408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96B6644-0B4E-4C7B-94A1-1E4D6891E408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96B6644-0B4E-4C7B-94A1-1E4D6891E408}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {078F3706-4063-415D-B2AC-1A8E55E94422}
+	EndGlobalSection
+EndGlobal

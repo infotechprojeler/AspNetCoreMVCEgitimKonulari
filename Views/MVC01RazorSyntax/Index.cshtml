@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "MVC Razor Syntax";
+
+    string adi = "Ali";
+    string[] isimler = { "Muhammed", "Ali", "Cem", "Kürşat", "Alparslan" };
+}
+
+<h2>MVC Razor Syntax</h2>
+<h6>Title : @ViewBag.Title</h6>
+<p>
+    C# kodu ile html kodlarını karışık yazabiliyoruz. Ekrandaki metnin c# kodu olduğunu başına eklenen at ifadesinden anlıyor sistem. Bu yazım şekline de razor syntax ı deniliyor
+</p>
+<h3>İsim :  @adi</h3>
+
+<h2>Dizideki İsimler</h2>
+
+@foreach (var isim in isimler)
+{
+    @isim
+    <hr />
+}
+
+<hr />
+
+@foreach (var isim in isimler)
+{
+    <h6>@isim</h6>
+}
+
+<hr />
+
+@foreach (var isim in isimler)
+{
+    @(isim + " ")
+    // isimleri aralarına boşluk bırakarak yazdırır
+    @:@isim -
+}
+
+<hr />
+
+info@deneme.com şeklinde at ifadesinden ince yapışık metin varsa bunun c# kodu olmadığını razor syntax anlar.
+
+<h5>
+    @@aspnet
+</h5>
+
+kullanıcı adı vb başında @@ işareti olan bir metin kullanmak için çift @@ işareti eklemeliyiz.
+
+<h3>
+    Üretim Yılı
+</h3>
+
+<select>
+    <option value="">Seçiniz</option>
+    @for (int i = DateTime.Now.Year; i > 2000; i--)
+    {
+        <option value="@i">@i</option>
+    }
+</select>
