@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "MVC de Partial Kullanımı";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    Partial parça anlamına gelir ve kod sayısı fazlalaşan ve karmaşıklaşan uygulamalarda sayfalarımızı parçalara bölerek kolay yönetmemizi sağlar.
+</p>
+
+<p>
+    Partial lar da birer view sayfasıdır ve kullanılacağı view klasörüne veya shared klasörüne eklenerek çalıştırılabilirler.
+</p>
+
+<ul>
+    @Html.Partial("_PartialMenu")
+    <li>
+        <a href="#">Şifre Yenileme</a>
+    </li>
+</ul>
+
+<h3>
+    Partial da Model Kullanımı (Klasik yöntem)
+</h3>
+
+@Html.Partial("_PartialModelKullanimi")
+
+<h3>
+    Partial da Model Kullanımı (Yeni yöntem)
+</h3>
+
+<partial name="_PartialModelKullanimi" />
+
+<h3>
+    Partial da Model Kullanımı (Asenkron çağırma yöntemi)
+</h3>
+
+@await Html.PartialAsync("_PartialModelKullanimi")
+
+<p class="alert alert-info">
+    Not : Model ile partial kullanırken partialin kullanacağı model verisi (bu sayfada uye listesi) controller dan gönderiliyorsa Mvc model binding ile bu datayı partial e otomatik iletiyor.
+</p>
+
+<p class="alert alert-danger">
+    Eğer model ile partialin kullanacağı data aynı değilse bu durumda kesinlikle modeli belirtmemiz gerekir yoksa sayfa hata verir!!!
+</p>

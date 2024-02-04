@@ -8,6 +8,9 @@ builder.Services.AddControllersWithViews();
 // aþaðýdaki kod uyecontexti entity framework kullanabilmek için uygulamaya ekler.
 builder.Services.AddDbContext<UyeContext>();
 
+// Uygulamada session kullanýmýný aktif etmek için:
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,6 +23,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection(); // uygulama http den https ye yönlendirmeyi kullansýn
 app.UseStaticFiles(); // app(uygulamamýz) statik (css, js, resim gibi) dosyalarý kullanabilsin
+
+app.UseSession(); // uygulamanýn içinde session kullanýmýný aktif et
 
 app.UseRouting(); // uygulamada routing kullanýlsýn
 

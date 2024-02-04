@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Cookie Oku";
+}
+
+<h1>Cookie Oku</h1>
+
+
+<h4>
+    username : @Context.Request.Cookies["kullaniciAdi"]
+</h4>
+
+<h4>
+    şifre : @Context.Request.Cookies["sifre"]
+</h4>
+
+<h4>
+    KullaniciGuid : @Context.Request.Cookies["userguid"]
+</h4>

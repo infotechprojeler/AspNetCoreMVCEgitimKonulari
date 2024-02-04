@@ -7,8 +7,12 @@
 <h1>Üyeler</h1>
 
 <p>
-    <a asp-action="Create">Yeni Ekle</a>
+    <a asp-action="Create" class="btn btn-outline-primary">Yeni Ekle</a>
 </p>
+<form>
+    <input type="search" name="q" placeholder="Ara" class="form-control w-25" />
+    <input type="submit" value="Ara" class="btn btn-outline-secondary" />
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -80,9 +84,9 @@
                     @Html.DisplayFor(modelItem => item.SifreTekrar)
                 </td>
                 <td>
-                    @Html.ActionLink("Düzenle", "Edit", new {  id=item.Id }) |
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
 
-                    @Html.ActionLink("Sil", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

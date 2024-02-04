@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "MVC Cookie - Çerez Kullanımı";
+}
+
+<h2>MVC Cookie - Çerez Kullanımı</h2>
+
+<p>
+    Web programlada uygulamayı kullanan kullanıcıların cihazlarına küçük tanımlama kod parçaları bırakmamızı sağlayan yapıdır.
+</p>
+
+<p class="alert alert-info">
+    Çerezler kullanıcı tarafında kullanıcının uygulamamıza bağlandığı tarayıcıda saklanır.
+    <br />
+    Bu şekilde kullanıcı tekrar uygulamaya geldiğinde onu tanıyabiliriz.
+</p>
+
+<h2>
+    Cookie Oluştur
+</h2>
+
+<form action="MVC11Cookie/CookieOlustur" method="post">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adınız" />
+    <input type="password" name="sifre" placeholder="Şifreniz" />
+    <input type="submit" value="Giriş" />
+</form>
+
+@Html.Raw(TempData["Mesaj"])
+
+<a href="/MVC11Cookie/CookieOku">Cookie Oku</a>
+<hr />
+<a href="/MVC11Cookie/CookieSil">Cookie Sil</a>

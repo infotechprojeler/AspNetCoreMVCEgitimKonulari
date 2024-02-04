@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "MVC File Upload - Dosya Yükleme İşlemleri";
+    var dosyalar = new DirectoryInfo(Directory.GetCurrentDirectory() + "/wwwroot/Images"); // .net core da bu bölüm yok : (Server.MapPath("/Images")); // sunucudaki belirtilen klasörü bul
+    var infoList = dosyalar.GetFiles(); // sunucudaki images klasöründeki dosyaları listele
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form action="/MVC10FileUpload" method="post" enctype="multipart/form-data">
+    <input type="file" name="dosya" id="fileupload" />
+    <input type="submit" value="Yükle" class="btn btn-primary" />
+</form>
+
+<p class="alert alert-warning">
+    Dikkat! Dosya yüklemek için form elementine enctype="multipart/form-data" attribute ütünü eklemeliyiz yoksa dosya yüklenmez!!
+</p>
+
+@TempData["Message"]
+
+<hr />
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>Resim</th>
+        <th>Dosya Adı</th>
+        <th>Oluşma Tarihi</th>
+        <th>Dosya Boyutu</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in infoList)
+    {
+        <tr>
+            <td>
+                <img src="/Images/@item.Name" alt="Resim Yok" height="75" />
+            </td>
+            <td>@item.Name</td>
+            <td>@item.CreationTime</td>
+            <td>@item.Length</td>
+            <td>
+                <form action="/MVC10FileUpload/ResimSil" method="post">
+                    <input type="hidden" value="@item.FullName" name="resimYolu" />
+                    <button type="submit" class="btn btn-danger">
+                        <span class="btn-close btn-close-white"></span>
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

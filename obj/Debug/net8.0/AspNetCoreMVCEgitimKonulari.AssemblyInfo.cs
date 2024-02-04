@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspNetCoreMVCEgitimKonulari")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88a3c9f1361ce73b5847db07d418fcfe3822c4f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspNetCoreMVCEgitimKonulari")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspNetCoreMVCEgitimKonulari")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

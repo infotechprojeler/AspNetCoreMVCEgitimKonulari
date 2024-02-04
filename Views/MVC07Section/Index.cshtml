@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "MVC de Section Yapısı";
+}
+
+<h2>MVC de Section Yapısı</h2>
+
+<section>
+    Burası html elementi olan section, sayfada bir bölüm.
+    <br />
+    MVC section ise view sayfalarından layout dosyasına html, css, javascript kodları göndermemizi sağlar.
+</section>
+
+@section scripts {
+    @*<script>
+            alert("Bu yazı section ile layouta gönderildi!")
+        </script>*@
+    <script>
+        console.warn("Bu yazı section ile layouta gönderildi!");
+    </script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+}
+
+@section OzelIcerik {
+    <section class="alert alert-info">
+        OzelIcerik
+    </section>
+}
+
+@section OzelCss {
+    <style>
+        body {
+            background-color: red;
+            color: white;
+        }
+    </style>
+}

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Session Oku";
+}
+
+<h1>Session Oku</h1>
+
+@if (Context.Session.GetInt32("IsLoggedIn") == 1) // eğer kullanıcı giriş yapmışsa bu değer gelir
+{
+    <h3>
+        Hoşgeldin @Context.Session.GetString("kullanici")
+    </h3>
+    <h3>
+        Kullanıcı Guid : @Context.Session.GetString("userguid")
+    </h3>
+}

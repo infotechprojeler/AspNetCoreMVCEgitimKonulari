@@ -78,12 +78,64 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC06CRUD/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC06CRUD/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC06CRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDZDUlVEXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC07Section/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDdTZWN0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC08Partial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDhQYXJ0aWFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC09ViewResults/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMDlWaWV3UmVzdWx0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC10FileUpload/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTBGaWxlVXBsb2FkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC11Cookie/CookieOku.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTFDb29raWVcQ29va2llT2t1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC11Cookie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTFDb29raWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC12Session/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTJTZXNzaW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC12Session/SessionOku.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTJTZXNzaW9uXFNlc3Npb25Pa3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_KategorilerPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9LYXRlZ29yaWxlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_PartialMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_PartialModelKullanimi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTW9kZWxLdWxsYW5pbWkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/_ValidationScriptsPartial.cshtml]
