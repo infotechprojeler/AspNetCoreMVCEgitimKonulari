@@ -1,4 +1,5 @@
-﻿
+﻿@using AspNetCoreMVCEgitimKonulari.Extensions;
+
 @{
     ViewData["Title"] = "Session Oku";
 }
@@ -13,4 +14,35 @@
     <h3>
         Kullanıcı Guid : @Context.Session.GetString("userguid")
     </h3>
+
+    <h3>
+        Kullanıcı Bilgileri
+    </h3>
+    var uye = Context.Session.GetJson<Uye>("uye"); // Bizim yazdığımız getjson metoduna uye isimli sessiondaki json datasını Uye nesnesine çevirip getirmesini belirtiyoruz.
+    if (uye is not null) // db de hiç kayıt yoksa hata vermemesi için
+    {
+        <table class="table">
+            <tr>
+                <td>Ad Soyad</td>
+                <td>@uye.Ad @uye.Soyad</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@uye.Email</td>
+            </tr>
+            <tr>
+                <td>TC Kimlik No</td>
+                <td>@uye.TcKimlikNo</td>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td>@uye.Telefon</td>
+            </tr>
+            <tr>
+                <td>Doğum Tarihi</td>
+                <td>@uye.DogumTarihi.ToShortDateString()</td>
+            </tr>
+        </table>
+    }
+
 }

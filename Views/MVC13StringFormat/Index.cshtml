@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "MVC String Verileri Formatlı Gösterme";
+    DateTime tarih = DateTime.Now;
+}
+
+<h2>MVC String Verileri Formatlı Gösterme</h2>
+
+<p>
+    Mvc de ekranda göstereceğimiz verileri biçimlendirmek için kullanacağımız yöntemler.
+</p>
+
+<p>
+    ViewBag.Data : @ViewBag.Data
+</p>
+
+<p>
+    ViewBag.Data2 : @ViewBag.Data2
+</p>
+
+<h3>
+    Tarih Formatlama
+</h3>
+
+<h4>
+    Tarih ve saat :
+</h4>
+@tarih
+
+<h5>
+    Kısa saat -t :
+</h5>
+@string.Format("{0:t}", tarih)
+
+<h5>
+    Kısa Tarih -d :
+</h5>
+@string.Format("{0:d}", tarih)
+
+<h5>
+    Yıl -yyyy :
+</h5>
+@string.Format("{0:yyyy}", tarih)
+
+<h2>
+    Sayı Formatlama
+</h2>
+
+C 49.90 - @string.Format("{0:C}", 49.90)
+
+<hr />
+
+D3 18 - @string.Format("{0:D3}", 18)
+
+<hr />
+
+D5 18 - @string.Format("{0:D5}", 18)
+
+<hr />
+
+F1 18.84 - @string.Format("{0:F1}", 18.84)
+
+<hr />
+
+F2 18.8 - @string.Format("{0:F2}", 18.8)
+
+<hr />
+
+F3 18.95 - @string.Format("{0:F3}", 18.95)

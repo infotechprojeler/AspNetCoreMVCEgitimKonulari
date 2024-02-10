@@ -1,4 +1,5 @@
 using AspNetCoreMVCEgitimKonulari.Models;
+using Microsoft.AspNetCore.Authentication.Cookies; // .net core da kullanýcý giriþ sistemi kullanacaksak gerekli kütüphane
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,13 @@ builder.Services.AddDbContext<UyeContext>();
 
 // Uygulamada session kullanýmýný aktif etmek için:
 builder.Services.AddSession();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(x =>
+    {
+        x.LoginPath = "/MVC15FiltersUsing/Login"; // oturum açmayan kullanýcýlarý varsayýlan account/login adresi yerine kendi istediðimiz login sayfasýna bu þekilde yönlendiriyoruz
+    }
+    ); // uygulamada cookie bazlý oturum sistemi kullanacaðýz
 
 var app = builder.Build();
 

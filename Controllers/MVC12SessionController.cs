@@ -1,4 +1,5 @@
-﻿using AspNetCoreMVCEgitimKonulari.Models;
+﻿using AspNetCoreMVCEgitimKonulari.Extensions;
+using AspNetCoreMVCEgitimKonulari.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreMVCEgitimKonulari.Controllers
@@ -27,6 +28,8 @@ namespace AspNetCoreMVCEgitimKonulari.Controllers
                 HttpContext.Session.SetString("sifre", sifre);
                 HttpContext.Session.SetInt32("IsLoggedIn", 1);
                 HttpContext.Session.SetString("userguid", Guid.NewGuid().ToString());
+                
+                HttpContext.Session.SetJson("uye", kullanici); // Kendi yazdığımız setJson metoduna çektiğimiz kullanıcıyı json olarak yükle
                 return RedirectToAction("SessionOku");
             }
             else
@@ -37,6 +40,7 @@ namespace AspNetCoreMVCEgitimKonulari.Controllers
         {
             // Session daki değerleri okumak için GetString ve getint32 metotları kullanılıyor
             TempData["SessionBilgi"] = HttpContext.Session.GetString("userguid"); // deger isimli session ın üzerindeki veriyi tempdataya aktar
+            
             return View();
         }
         public ActionResult SessionSil()

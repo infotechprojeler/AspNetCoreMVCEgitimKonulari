@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Infotech Academy\source\repos\AspNetCoreMVCEgitimKonulari
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -120,6 +128,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC12Session/SessionOku.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTJTZXNzaW9uXFNlc3Npb25Pa3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC13StringFormat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTNTdHJpbmdGb3JtYXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC14AppSetting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTRBcHBTZXR0aW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC15FiltersUsing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTVGaWx0ZXJzVXNpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC15FiltersUsing/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTVGaWx0ZXJzVXNpbmdcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/MVC15FiltersUsing/UyeGuncelle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTVZDMTVGaWx0ZXJzVXNpbmdcVXllR3VuY2VsbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Infotech Academy/source/repos/AspNetCoreMVCEgitimKonulari/Views/Shared/Error.cshtml]
