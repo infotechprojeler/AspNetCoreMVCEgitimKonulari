@@ -1,7 +1,9 @@
 ﻿using AspNetCoreMVCEgitimKonulari.Filters;
 using AspNetCoreMVCEgitimKonulari.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace AspNetCoreMVCEgitimKonulari.Controllers
 {
@@ -40,21 +42,45 @@ namespace AspNetCoreMVCEgitimKonulari.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(Uye uye)
+        public async Task<IActionResult> LoginAsync(Uye uye)
         {
             try
             {
-                Uye admin = context.Uyeler.Find(uye.Email, uye.Sifre);
+                // Uye admin = context.Uyeler.FirstOrDefault(u=>u.Email == uye.Email && u.Sifre == uye.Sifre); // 1.yöntem
+                Uye admin = context.Uyeler.Where(u => u.Email == uye.Email && u.Sifre == uye.Sifre).FirstOrDefault(); // 2.yöntem
                 if (admin is not null)
                 {
-                    ModelState.AddModelError("", "Merhaba Admin");
+                    // ModelState.AddModelError("", "Merhaba " + admin.Ad);
+                    // Kullanıcıya giriş için vermek istediğimiz hakları tanımlıyoruz
+                    var haklar = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Email, admin.Email),
+                        new Claim(ClaimTypes.Role, "Admin")
+                    };
+                    // kullanıcıya kimlik tanımlıyoruz
+                    var kullaniciKimligi = new ClaimsIdentity(haklar, "Login"); // kullanıcıya tanıdığımız hakları kimliğe işliyoruz
+                    // kullanıcıya verdiğimiz kimlik ile tanımlı kurallardan oluşan nesne oluşturuyoruz
+                    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(kullaniciKimligi);
+                    // Yetkilendirme ile sisteme girişi yapıyoruz
+                    await HttpContext.SignInAsync(claimsPrincipal);
+                    // Giriş sonrası tarayıcıda returnurl varsa 
+                    if (!string.IsNullOrEmpty(HttpContext.Request.Query["ReturnUrl"]))
+                    {
+                        return Redirect(HttpContext.Request.Query["ReturnUrl"]); // kullanıcıyı ReturnUrl deki gitmek istediği adrese yönlendir
+                    }
+                    return RedirectToAction("Index"); // ReturnUrl yoksa anasayfaya yönlendir
                 }
-            }
+             }
             catch (Exception)
             {
                 ModelState.AddModelError("", "Hata Oluştu!");
             }
             return View(uye);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index");
         }
     }
 }

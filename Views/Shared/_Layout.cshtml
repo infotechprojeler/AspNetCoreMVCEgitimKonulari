@@ -47,7 +47,22 @@
                         @* @Html.Partial("_PartialMenu") bu eski kullanımı, hala çalışıyor ama kullanımı tavsiye edilmiyor *@
                         <partial name="_PartialMenu" />
                     </ul>
-                </div>
+                </div>@if (Context.User.Identity.IsAuthenticated == true)
+                {
+                    <form asp-controller="MVC15FiltersUsing" asp-action="Logout" class="text-end">
+                        <input type="submit" value="Oturumu Kapat" class="btn btn-danger" />
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="MVC15FiltersUsing" asp-action="Login" class="btn btn-outline-primary">
+                        Giriş
+                    </a>
+                    
+                    <a asp-controller="MVC06CRUD" asp-action="Create" class="btn btn-primary ms-3">
+                        Kayıt
+                    </a>
+                }
             </div>
         </nav>
     </header>

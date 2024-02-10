@@ -1,5 +1,7 @@
-﻿@{
+﻿@using AspNetCoreMVCEgitimKonulari.Extensions;
+@{
     ViewBag.Title = "MVC15 Filters Using";
+    var uye = Context.Session.GetJson<Uye>("uye");
 }
 
 <h2>MVC15 Filters Using</h2>
@@ -28,4 +30,7 @@
     Ayrıca ana web.config dosyasına authentication kodlarını eklememiz gerekir.
 </p>
 
-<a href="/MVC15FiltersUsing/UyeGuncelle/1">Uye Guncelle</a>
+@if (uye is not null)
+{
+    <a href="/MVC15FiltersUsing/UyeGuncelle/@uye.Id">Üye Guncelle</a>
+}

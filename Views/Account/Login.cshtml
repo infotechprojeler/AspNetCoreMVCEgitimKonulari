@@ -1,6 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Uye
+
 @{
+    ViewData["Title"] = "Üye Girişi";
 }
-Burası account login sayfası
+
+<div class="row">
+    <div class="col-md-4 m-auto mt-5 p-5 bg-light">
+        <h3>Üye Girişi</h3>
+        <hr />
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sifre" class="control-label"></label>
+                <input asp-for="Sifre" class="form-control" />
+                <span asp-validation-for="Sifre" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Giriş" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
